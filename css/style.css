@@ -1,0 +1,42 @@
+img{
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.cheese{
+    object-position: center 70%;
+}
+
+.clasic{
+    object-position: center center;
+}
+
+.veggie{
+    object-position: left center;
+}
+
+.mexican{
+    object-position: center bottom;
+}
+
+.container-botones{
+    display: flex;
+}
+
+.boton-borde-1{
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    background-color: rgba(51, 242, 124, 0.179);
+}
+
+.boton-borde-2{
+    border-radius: 0 8px 8px 0;
+}
+
+.boton-img-1, .boton-img-2{
+    width: 1.5rem;
+    height: auto;
+}

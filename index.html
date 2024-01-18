@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <!-- todos los productos -->
+    <main class="container mt-5">
+        <figure class="text-center mb-5">
+            <h1>Bienvenidos</h1>
+        </figure>
+        <div class="row text-center">
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Cheese Burger</h5>
+                        <img src="multimedia/cheese.jpg" alt="Cheese Burger" class="mb-4 cheese">
+                        <p class="text-muted">Doble medallón smashed con mucho cheddar</p>
+                        <p class="mb-3"><b>$3000</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Cheese" data-precio="3000">Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Clásica</h5>
+                        <img src="multimedia/clasic.jpg" alt="Clásica" class="mb-4 clasic">
+                        <p class="text-muted">Doble medallón smashed, lechuga, tomate, pickles y cheddar</p>
+                        <p class="mb-3"><b>$3500</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Clasica" data-precio="3500">Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Oklahoma</h5>
+                        <img src="multimedia/oklahoma.webp" alt="Oklahoma" class="mb-4 oklahoma">
+                        <p class="text-muted">Doble medallón smashed con cebolla a la plancha y cheddar</p>
+                        <p class="mb-3"><b>$4000</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Oklahoma" data-precio="4000">Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Bluecheese</h5>
+                        <img src="multimedia/blue.jpg" alt="Bluecheese" class="mb-4 bluecheese">
+                        <p class="text-muted">Doble medallón smashed con queso azul, cebolla a la plancha y nuez</p>
+                        <p class="mb-3"><b>$4200</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Blue" data-precio="4200">Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Veggie</h5>
+                        <img src="multimedia/veggie.avif" alt="Veggie" class="mb-4 veggie">
+                        <p class="text-muted">Medallón vegetariano (porotos, garbanzos o lentejas), cheddar, lechuga y tomate</p>
+                        <p class="mb-3"><b>$4000</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Veggie" data-precio="4000">Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 mb-4">Mexican</h5>
+                        <img src="multimedia/guacamole.jpg" alt="Mexican" class="mb-4 mexican">
+                        <p class="text-muted">Doble medallón smashed, chedar y guacamole</p>
+                        <p class="mb-3"><b>$4500</b></p>
+                        <button class="btn btn-primary mt-auto" data-burger="Mexican" data-precio="4500">Agregar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- contenedor -->
+    <section class="container mt-3">
+        <ul class="list-group" id="contenedor">
+            <!-- template producto -->
+            <template id="template">
+                <li class="list-group-item text-uppercase bg-secondary text-white">
+                    <span class="badge bg-primary rounded-pill align-middle me-3" id="item-cantidad">1</span>
+                    <span class="lead aling-middle" id="titulo-item">Item</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="lead mb-0">Sub-total: $<span id="precio-item">200</span></p>
+                    </div>
+                    <div class="container-botones">
+                        <button class="btn btn-sm btn-outline-success boton-borde-1">
+                            <img src="multimedia/plus.png" alt="Agregar" class="boton-img-1">
+                        </button>
+                        <button class="btn btn-sm btn-danger boton-borde-2">
+                            <img src="multimedia/trash.png" alt="Quitar" class="boton-img-2">
+                        </button>
+                    </div>
+                </li>
+            </template>
+        </ul>
+    </section>
+    <!-- precio final -->
+    <footer id="footer" class="container mt-3 mb-5">
+        <!-- template precio final -->
+        <template id="template-footer">
+            <div class="card">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <p class="lead mb-0">Total: $<span class="precio_footer">1500</span></p>
+                    <button class="btn btn-outline-primary boton-finalizar">Finalizar compra</button>
+                </div>
+            </div>
+        </template>
+    </footer>
+</body>
+</html>
