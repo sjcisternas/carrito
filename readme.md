@@ -4,7 +4,7 @@
 
 ## Sobre el proyecto:
 
-Este carrito fue realizado como ejercicio de práctica de manipulación de DOM con JavaScript. 
+Este carrito fue realizado como ejercicio de práctica de manipulación de DOM con JavaScript. Por este motivo, el diseño no es prioridad en este proyecto.
 
 El proyecto fue abordado desde el paradigma de programación funcional, con lo cual, el código puede descomponerse en las siguientes funciones simples:
 
